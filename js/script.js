@@ -6,7 +6,15 @@ var mask = new IMask(phone, {
 });
 
 
+window.addEventListener('unload', function() {
+		if (localStorage.getItem('startTime') == undefined) {
+			localStorage.setItem('startTime', Date.parse(new Date()));
+		}
+});
+
 function getTimeRemains(endtime) {
+
+
 	var periodLeft = Date.parse(endtime) - Date.parse(new Date());
 
 	var sec = Math.floor( (periodLeft/1000) % 60 );
@@ -52,5 +60,10 @@ function setTimer(endtime) {
 
 }
 
-	var end = new Date(Date.parse(new Date()) + 24 * 60 * 60 * 1000);
+	var end = new Date(+localStorage.getItem('startTime') + 24 * 60 * 60 * 1000);
+	
+
+	
+
+
 	setTimer(end);
