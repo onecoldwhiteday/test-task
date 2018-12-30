@@ -1,4 +1,4 @@
-// Подключил imasksjs для маски
+//Подключил imasksjs для маски
 
 var phone = document.getElementById('phone');
 var mask = new IMask(phone, {
@@ -62,9 +62,4 @@ function setTimer(endtime) {
 }
 
 	var end = new Date(+localStorage.getItem('startTime') + 24 * 60 * 60 * 1000);
-	
-
-	
-
-
 	setTimer(end);

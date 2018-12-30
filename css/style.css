@@ -69,8 +69,13 @@ html, body {
 	margin-bottom: 100px;
 }
 
+.timer p {
+	display: inline-block;
+	margin-right: 10px;
+}
+
 .timer span {
 	margin-right: 30px;
 	font-size: 30px;
-	margin-left: 10px;
+	margin-right: 5px;
 }
