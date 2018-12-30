@@ -61,5 +61,5 @@ function setTimer(endtime) {
 
 }
 
-	var end = new Date(+localStorage.getItem('startTime') + 24 * 60 * 60 * 1000);
+	var end = new Date(Number(localStorage.getItem('startTime')) + 24 * 60 * 60 * 1000);
 	setTimer(end);
