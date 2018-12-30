@@ -1,16 +1,13 @@
-// Подключил imasksjs для маски
+Подключил imasksjs для маски
 
 var phone = document.getElementById('phone');
 var mask = new IMask(phone, {
   mask: '+{7}(000) 000-00-00'
 });
 
-
-window.addEventListener('unload', function() {
-		if (localStorage.getItem('startTime') == undefined) {
-			localStorage.setItem('startTime', Date.parse(new Date()));
-		}
-});
+if (localStorage.getItem('startTime') == undefined) {
+	localStorage.setItem('startTime', Date.parse(new Date()));
+};
 
 function getTimeRemains(endtime) {
 
@@ -62,9 +59,4 @@ function setTimer(endtime) {
 }
 
 	var end = new Date(+localStorage.getItem('startTime') + 24 * 60 * 60 * 1000);
-	
-
-	
-
-
 	setTimer(end);
