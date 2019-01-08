@@ -1,12 +1,12 @@
-//Подключил imasksjs для маски
-
 var phone = document.getElementById('phone');
 var mask = new IMask(phone, {
   mask: '+{7}(000) 000-00-00'
 });
 
 
-window.addEventListener('unload', function() {
+console.log(localStorage.getItem('startTime'));
+
+window.addEventListener('onload', function() {
 		if (localStorage.getItem('startTime') == undefined) {
 			localStorage.setItem('startTime', Date.parse(new Date()));
 		}
