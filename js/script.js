@@ -6,7 +6,7 @@ var mask = new IMask(phone, {
 });
 
 
-window.addEventListener('unload', function() {
+window.addEventListener('onload', function() {
 		if (localStorage.getItem('startTime') == undefined) {
 			localStorage.setItem('startTime', Date.parse(new Date()));
 		}
