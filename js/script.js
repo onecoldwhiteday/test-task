@@ -3,7 +3,6 @@ var mask = new IMask(phone, {
   mask: '+{7}(000) 000-00-00'
 });
 
-
 console.log(localStorage.getItem('startTime'));
 
 window.addEventListener('onload', function() {
