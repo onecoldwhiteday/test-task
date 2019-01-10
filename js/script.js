@@ -3,13 +3,13 @@ var mask = new IMask(phone, {
   mask: '+{7}(000) 000-00-00'
 });
 
-console.log(localStorage.getItem('startTime'));
+console.log(sessionStorage.getItem('startTime'));
 
-window.addEventListener('onload', function() {
-		if (localStorage.getItem('startTime') == undefined) {
-			localStorage.setItem('startTime', Date.parse(new Date()));
+// window.addEventListener('onload', function() {
+		if (sessionStorage.getItem('startTime') == undefined) {
+			sessionStorage.setItem('startTime', Date.parse(new Date()));
 		}
-});
+// });
 
 function getTimeRemains(endtime) {
 
@@ -60,5 +60,5 @@ function setTimer(endtime) {
 
 }
 
-	var end = new Date(Number(localStorage.getItem('startTime')) + 24 * 60 * 60 * 1000);
+	var end = new Date(Number(sessionStorage.getItem('startTime')) + 24 * 60 * 60 * 1000);
 	setTimer(end);
