@@ -4,8 +4,11 @@ var mask = new IMask(phone, {
 });
 
 
+<<<<<<< HEAD
 console.log(localStorage.getItem('startTime'));
 
+=======
+>>>>>>> 451b0a4ab7ed3208da19069ecd9c936b190e2111
 window.addEventListener('onload', function() {
 		if (localStorage.getItem('startTime') == undefined) {
 			localStorage.setItem('startTime', Date.parse(new Date()));
